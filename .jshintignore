@@ -1,0 +1,4 @@
+node_modules/
+client/js/
+plugins/**/*.marko.js
+plugins/**/node_modules/**

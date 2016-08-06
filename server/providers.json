@@ -1,0 +1,31 @@
+{
+  "facebook-login": {
+    "provider": "facebook",
+    "module": "passport-facebook",
+    "clientID": "",
+    "clientSecret": "",
+    "callbackURL": "/auth/facebook/callback",
+    "authPath": "/auth/facebook",
+    "callbackPath": "/auth/facebook/callback",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login",
+    "scope": ["email"],
+    "failureFlash": true,
+    "session": true
+  },
+  "google-login": {
+    "provider": "google",
+    "module": "passport-google-oauth",
+    "strategy": "OAuth2Strategy",
+    "clientID": "",
+    "clientSecret": "",
+    "callbackURL": "/auth/google/callback",
+    "authPath": "/auth/google",
+    "callbackPath": "/auth/google/callback",
+    "successRedirect": "/auth/account",
+    "failureRedirect": "/login",
+    "scope": ["email", "profile"],
+    "failureFlash": true,
+    "session": true
+  }
+}

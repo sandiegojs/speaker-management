@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "../plugins/models",
+      "loopback-component-passport/lib/models",
+      "loopback-component-storage/lib/models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../plugins/models/mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": true
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": true
+  },
+  "UserCredential": {
+    "dataSource": "db",
+    "public": true
+  },
+  "UserIdentity": {
+    "dataSource": "db",
+    "public": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "speakermgmt",
+    "username": "admin",
+    "password": "password",
+    "debug": true,
+    "server": {
+      "auto_reconnect": true,
+      "reconnectTries": 100,
+      "reconnectInterval": 1000
+    }
+  },
+  "memory": {
+    "name": "db",
+    "connector": "memory"
+  }
+}

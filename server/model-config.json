@@ -44,5 +44,21 @@
   "UserIdentity": {
     "dataSource": "db",
     "public": true
+  },
+  "Speaker": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Talk": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Proposal": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "db",
+    "public": true
   }
 }

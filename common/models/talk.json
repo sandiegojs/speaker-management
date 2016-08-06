@@ -1,0 +1,30 @@
+{
+  "name": "Talk",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "length": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "speaker": {
+      "type": "belongsTo",
+      "model": "Speaker",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

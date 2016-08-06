@@ -1,0 +1,40 @@
+{
+  "name": "Proposal",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "proposedDate": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "log": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "speaker": {
+      "type": "belongsTo",
+      "model": "Speaker",
+      "foreignKey": ""
+    },
+    "talk": {
+      "type": "belongsTo",
+      "model": "Talk",
+      "foreignKey": ""
+    },
+    "event": {
+      "type": "belongsTo",
+      "model": "Event",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

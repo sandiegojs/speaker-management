@@ -66,6 +66,8 @@ var serverOptions = {
 
 var gulp = require('gulp');
 
+require('require-dir')('./gulp-tasks');
+
 // Plugins needed for tasks
 var plugins = {
   spawn: require('child_process').spawn,

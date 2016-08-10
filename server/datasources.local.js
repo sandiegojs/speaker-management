@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  'db': {
+  'backup': {
     'name': 'db',
     'connector': 'mongodb',
     'host': process.env.MONGODB_HOST,
@@ -16,7 +16,7 @@ module.exports = {
       'reconnectInterval': 1000
     }
   },
-  'memory': {
+  'db': {
     'name': 'db',
     'connector': 'memory'
   }

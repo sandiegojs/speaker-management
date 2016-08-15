@@ -20,19 +20,18 @@ const ProposalsTable = React.createClass({
   </tr>
   </thead>
     <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Tompson</td>
-      <td>the_mark7</td>
-      <td>
-        <a href="user.html"><i className="icon-pencil"></i></a>
-        <a href="#myModal" role="button" data-toggle="modal"><i className="icon-remove"></i></a>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Tompson</td>
+        <td>the_mark7</td>
+        <td>
+          <a href="user.html"><i className="icon-pencil"></i></a>
+          <a href="#myModal" role="button" data-toggle="modal"><i className="icon-remove"></i></a>
         </td>
-        </tr>
-
-        </tbody>
-      </table>
+      </tr>
+    </tbody>
+    </table>
     </div>
     </div>)
   }

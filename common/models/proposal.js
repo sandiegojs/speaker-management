@@ -1,6 +1,14 @@
 'use strict'
 
 module.exports = function(Proposal) {
+
+  console.log("I'm in the mainframe!")  // prints to Bash
+
+  testButton = html.getElementById("data-reactid='3'")
+  testButton.onClick{
+    console.log("I'm in the mainframe!")
+  }
+
   const utils = require('loopback/lib/utils')
   Proposal.submit = function(data, cb) {
     cb = cb || utils.createPromiseCallback()

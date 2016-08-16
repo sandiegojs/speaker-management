@@ -1,12 +1,24 @@
 import React from 'react';
-
+import axios from 'axios';
 
 const ProposalsTable = React.createClass({
   render: function() {
 
-    var proposals = [
-      { id: 1, speakerId: 1, talkId: 1 }
-    ];
+    axios({
+      method: 'get',
+      // TODO: un-hardcode the url
+      url: "http://localhost:3000/api/proposals",
+      dataType: 'json',
+      cache: false,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+    var proposals = []
 
     var proposalRows = proposals.map(function(proposal) {
       return React.createElement(ProposalRow, { proposal: proposal });

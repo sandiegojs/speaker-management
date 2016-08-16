@@ -12,13 +12,20 @@ const ProposalsTable = React.createClass({
       cache: false,
       })
       .then(function (response) {
-        console.log(response);
+        console.log("Proposals listed below:");
+        console.log(response.data);
       })
       .catch(function(error) {
         console.log(error);
       });
 
-    var proposals = []
+    // TODO: save response from http request to proposals variable
+    // and update the state so that data shows on page
+    var proposals = [
+      {id: 1, speakerId: 1, talkId: 1},
+      {id: 2, speakerId: 2, talkId: 2},
+      {id: 3, speakerId: 3, talkId: 3},
+      ]
 
     var proposalRows = proposals.map(function(proposal) {
       return React.createElement(ProposalRow, { proposal: proposal });
@@ -27,10 +34,9 @@ const ProposalsTable = React.createClass({
     return (
       <div>
         <div>
-          <button>New User</button>
-          <button>Import</button>
-          <button>Export</button>
+          <button>Sign up for a lightning talk</button>
         </div>
+        <br />
         <div>
           <table>
             <thead>

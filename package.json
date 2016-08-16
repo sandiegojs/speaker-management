@@ -14,6 +14,7 @@
     "architect": "0.1.11",
     "architect-debug-logger": "1.0.1",
     "async": "2.0.0-rc.6",
+    "axios": "0.12.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",

@@ -1,40 +1,68 @@
 import React from 'react';
+import axios from 'axios';
 
 const ProposalsTable = React.createClass({
-  render() {
+  render: function() {
+
+    axios({
+      method: 'get',
+      // TODO: un-hardcode the url
+      url: "http://localhost:3000/api/proposals",
+      dataType: 'json',
+      cache: false,
+      })
+      .then(function (response) {
+        console.log("Proposals listed below:");
+        console.log(response.data);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+    // TODO: save response from http request to proposals variable
+    // and update the state so that data shows on page
+    var proposals = [
+      {id: 1, speakerId: 1, talkId: 1},
+      {id: 2, speakerId: 2, talkId: 2},
+      {id: 3, speakerId: 3, talkId: 3},
+      ]
+
+    var proposalRows = proposals.map(function(proposal) {
+      return React.createElement(ProposalRow, { proposal: proposal });
+    });
+
     return (
       <div>
         <div>
-          <button>New User</button>
-          <button>Import</button>
-          <button>Export</button>
+          <button>Sign up for a lightning talk</button>
         </div>
-      <div>
-      <table>
-      <thead>
-      <tr>
-      <th>#</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Username</th>
-  </tr>
-  </thead>
-    <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Tompson</td>
-      <td>the_mark7</td>
-      <td>
-        <a href="user.html"><i className="icon-pencil"></i></a>
-        <a href="#myModal" role="button" data-toggle="modal"><i className="icon-remove"></i></a>
-        </td>
-        </tr>
+        <br />
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Proposal Id</th>
+                <th>Speaker Id</th>
+                <th>Talk Id</th>
+              </tr>
+            </thead>
+            <tbody>
+              {proposalRows}
+            </tbody>
+          </table>
+        </div>
+      </div>)
+  }
+});
 
-        </tbody>
-      </table>
-    </div>
-    </div>)
+var ProposalRow = React.createClass({
+  render: function() {
+    return (
+      <tr>
+        <td>{this.props.proposal.id}</td>
+        <td>{this.props.proposal.speakerId}</td>
+        <td>{this.props.proposal.talkId}</td>
+      </tr>)
   }
 });
 

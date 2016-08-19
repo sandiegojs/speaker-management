@@ -1,7 +1,6 @@
 'use strict'
 
 module.exports = function(Proposal) {
-
   const utils = require('loopback/lib/utils')
   Proposal.submit = function(data, cb) {
     cb = cb || utils.createPromiseCallback()

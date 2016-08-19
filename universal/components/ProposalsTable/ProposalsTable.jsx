@@ -85,4 +85,11 @@ const ProposalsTable = React.createClass({
   }
 });
 
+// not sure what this does, but doesn't appear to be breaking anything
 module.exports = ProposalsTable;
+
+// was getting a "'document' not defined" error so wrapped it in an if statement to check
+// to see if a window object is present (meaning it's on the browser/client side)
+if (typeof window !== 'undefined') {
+  React.render(<ProposalsTable />, document.getElementById("#content"));
+}

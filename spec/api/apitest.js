@@ -3,7 +3,7 @@
 const request = require('supertest');
 const app = require('../../server/server');
 
-describe('GET /api/proposals', function() {
+describe('GET /api/proposals', () => {
   it('respond with json', function(done) {
     request(app)
       .get('/api/proposals')
@@ -14,8 +14,8 @@ describe('GET /api/proposals', function() {
 });
 
 
-describe("POST /api/proposals", function (){
-  it("Posts a new proposal to /api/proposals", function(done){
+describe("POST /api/proposals", () => {
+  it("Posts a new proposal to /api/proposals", function(done) {
     let proposal = {
       speakerId: '123a',
       talkId: '234a',

@@ -61,6 +61,7 @@
     "serve-favicon": "^2.0.1",
     "source": "0.0.3",
     "stream-browserify": "2.0.1",
+    "supertest": "^1.2.0",
     "uglify": "^0.1.5",
     "underscore": "1.8.3",
     "vinyl-buffer": "^1.0.0",
@@ -79,7 +80,7 @@
     "karma-browserify": "^4.4.0",
     "karma-chrome-launcher": "^0.2.1",
     "mockery": "^1.4.0",
-    "supertest": "1.1.0"
+    "supertest": "^1.2.0"
   },
   "repository": {
     "type": "git",

@@ -4,11 +4,11 @@ var loopback = require('loopback');
 
 var app = module.exports = loopback();
 
-app.on('start', function onStart(){
+app.on('start', function onStart() {
   app.start();
 });
 
-app.on('started', function onStarted(){
+app.on('started', function onStarted() {
   var baseUrl = getUrl(app);
   console.log('Web server listening at: %s', baseUrl);
   console.log('Get server status at: %s%s', baseUrl, '/status');
@@ -18,7 +18,7 @@ app.on('started', function onStarted(){
   }
 });
 
-function getUrl(app){
+function getUrl(app) {
   if (app.get('url')) {
     return app.get('url').replace(/\/$/, '');
   } else {
@@ -33,7 +33,7 @@ function getUrl(app){
  * @param options Options used during the boot process
  * @param callback
  */
-app.boot = function bootServer(options){
+app.boot = function bootServer(options) {
   var boot = require('loopback-boot');
 
   // Pass boot options to app to allow it to set additional app properties
@@ -49,12 +49,14 @@ app.boot = function bootServer(options){
  *
  * @param options Options used override defaults
  */
-function getOptions(options){
+function getOptions(options) {
   // TODO: move to argv module that provides documentation
   var argv = require('minimist')(process.argv.slice(2));
   var _ = require('underscore');
 
-  if (options === undefined) options = {};
+  if (options === undefined) {
+    options = {}
+  }
 
   // Handle common runtime overrides
   var cliOptions = {
@@ -89,8 +91,8 @@ function getOptions(options){
 /***
  * Starts HTTP server
  */
-app.start = function startServer(){
-  return app.listen(function(){
+app.start = function startServer() {
+  return app.listen(function() {
     app.emit('started');
   });
 };

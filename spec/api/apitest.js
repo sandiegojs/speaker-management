@@ -13,7 +13,6 @@ describe('GET /api/proposals', () => {
   });
 });
 
-
 describe("POST /api/proposals", () => {
   it("Posts a new proposal to /api/proposals", function(done) {
     let proposal = {
@@ -22,7 +21,6 @@ describe("POST /api/proposals", () => {
       proposedDate: '8/20/16',
       status: 'new'
     }
-
     request(app)
       .post("/api/proposals")
       .send(proposal)

@@ -4,25 +4,25 @@ const request = require('supertest');
 const app = require('../../server/server');
 
 describe('GET /api/proposals', () => {
-  it('respond with json', function(done) {
+  it('respond with json', (done) => {
     request(app)
       .get('/api/proposals')
       .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
+      .expect('Content-Type', /json/, done)
       .expect(200, done);
   });
 });
 
-describe("POST /api/proposals", () => {
-  it("Posts a new proposal to /api/proposals", function(done) {
+describe("POST /api/proposals/submit", () => {
+  it("Posts a new proposal to /api/proposals", (done) => {
     let proposal = {
-      speakerId: '123a',
-      talkId: '234a',
-      proposedDate: '8/20/16',
-      status: 'new'
+      speakerName: "Danny",
+      speakerEmail: "danny@pham.com",
+      talkTitle: "X for Fun and Profit",
+      talkDescription: "Learning X is great and you can haz monies",
     }
     request(app)
-      .post("/api/proposals")
+      .post("/api/proposals/submit")
       .send(proposal)
       .expect(200, done);
   });

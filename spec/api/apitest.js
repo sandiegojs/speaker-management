@@ -18,8 +18,8 @@ describe("POST /api/proposals/submit", () => {
     let proposal = {
       speakerName: "Danny",
       speakerEmail: "danny@pham.com",
-      talkTitle: "X for Fun and Profit",
-      talkDescription: "Learning X is great and you can haz monies",
+      talkTitle: "Do this instead of that",
+      talkDescription: "That is so-so but this, this is revolutionary.",
     }
     request(app)
       .post("/api/proposals/submit")

@@ -2,6 +2,7 @@
 
 const request = require('supertest');
 const app = require('../../server/server');
+app.boot();
 
 describe('GET /api/proposals', () => {
   it('respond with json', (done) => {
